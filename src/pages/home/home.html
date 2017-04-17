@@ -1,9 +1,46 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>记账</ion-title>
+    <ion-title>Bills</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
+  <div class="board">
+    <div class="calendar-header"></div>
+    <div class="calendar-row">
+      <div class="calendar-col"></div>
+      <div class="calendar-col"></div>
+      <div class="calendar-col"></div>
+      <div class="calendar-col"></div>
+      <!--<div class="calendar-col"></div>
+      <div class="calendar-col"></div>
+      <div class="calendar-col"></div>-->
+    </div>
+    <div class="calendar-row"></div>
+    <div class="calendar-row"></div>
+    <div class="calendar-row"></div>
+  </div>
+
+  <div>
+    <ion-list>
+      <ion-item>
+        {{billTag}} : {{amount}} [{{billSource}}]
+      </ion-item>
+      <ion-item>
+        {{billTag}} : {{amount}} [{{billSource}}]
+      </ion-item>
+      <ion-item>
+        {{billTag}} : {{amount}} [{{billSource}}]
+      </ion-item>
+      <ion-item>
+        {{billTag}} : {{amount}} [{{billSource}}]
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-fab right bottom>
+    <button ion-fab mini color="danger" (click)='add()'><ion-icon name="add"></ion-icon></button>
+    <!--<ion-fab-list></ion-fab-list>-->
+  </ion-fab>
 </ion-content>
